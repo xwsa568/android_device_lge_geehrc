@@ -58,8 +58,8 @@ TARGET_BOARD_INFO_FILE := device/lge/geehrc/board-info.txt
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/geehrc/bluetooth
 
-# Use the CM PowerHAL
-TARGET_USES_CM_POWERHAL := true
+# Use the QCOM PowerHAL
+TARGET_USES_QCOM_POWERHAL := true
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
