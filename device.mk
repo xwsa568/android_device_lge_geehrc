@@ -200,11 +200,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
 
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-	camera.geehrc \
-	camera.msm8960 \
-	libmmcamera_interface2 \
-	libmmcamera_interface
 
 PRODUCT_PACKAGES += \
         libmm-omxcore \
