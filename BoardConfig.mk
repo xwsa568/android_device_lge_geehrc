@@ -160,5 +160,3 @@ MALLOC_IMPL := dlmalloc
 -include vendor/lge/gee/BoardConfigVendor.mk
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-
-BOARD_HARDWARE_CLASS := device/lge/geehrc/cmhw/
