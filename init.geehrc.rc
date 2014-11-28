@@ -49,6 +49,10 @@ on init
     setprop persist.radio.custom_ecc_voice "{515:117},{452:113,114,115}"
     setprop persist.radio.custom_ecc_hard "911,*911,#911,112,999,000,08,118,120,122,110,119,995,111,113,125,127,133"
 
+on charger-fs
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system  /system ro barrier=1
+    start rmt_storage
+
 on fs
     mount_all ./fstab.geehrc
     restorecon_recursive /persist
@@ -279,6 +283,7 @@ on post-fs-data
     rm /dev/diag
 
 on charger
+    trigger charger-fs
     # Enable Power modes and set the CPU Freq Sampling rates
     write /sys/module/rpm_resources/enable_low_power/L2_cache 1
     write /sys/module/rpm_resources/enable_low_power/pxo 1
