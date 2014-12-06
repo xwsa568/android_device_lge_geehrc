@@ -245,11 +245,17 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=0 \
-        telephony.lteOnGsmDevice=1 \
-        ro.telephony.default_network=9 \
-        ro.ril.def.preferred.network=9
-         
+	telephony.lteOnCdmaDevice=1 \
+	telephony.lteOnGsmDevice=0 \
+	ro.telephony.default_network=10 \
+	ro.ril.def.preferred.network=10 \
+	ril.subscription.types=NV,RUIM \
+	ro.cdma.subscription=0 \
+	ro.telephony.default_cdma_sub=0
+
+PRODUCT_COPY_FILES += \
+        device/lge/geehrc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
