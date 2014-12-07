@@ -161,22 +161,25 @@ BOARD_HAS_NO_REAL_SDCARD := true
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 TW_FLASH_FROM_STORAGE := true
 TW_NO_USB_STORAGE := true
+HAVE_SELINUX := true
 
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+TARGET_RECOVERY_INITRC := device/lge/geehrc/recovery/init.rc
 TW_BRIGHTNESS_PATH := /sys/class/backlight/lm3530/brightness
 TW_MAX_BRIGHTNESS := 255
 
 #MultiROM config. MultiROM also uses parts of TWRP config
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/lge/geehrc/mr_init_devices.c
-MR_RD_ADDR := 0x82000000
+MR_RD_ADDR := 0x82500000
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/lge/geehrc/recovery/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x84000000
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_INFOS := device/lge/geehrc/mrom_infos
 
 #Asserts
 TARGET_OTA_ASSERT_DEVICE := gee,geeb,geehrc,e975,geehrc_4g_spr,geespr,ls970,geehrc4g,geehrc4g_spr_us,geebus,e970,e973,e971,geeb_att_us
