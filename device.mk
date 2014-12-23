@@ -253,9 +253,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.subscription=0 \
 	ro.telephony.default_cdma_sub=0
 
-PRODUCT_COPY_FILES += \
-        device/lge/geehrc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true

@@ -8,6 +8,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
+PRODUCT_COPY_FILES += \
+        device/lge/geehrc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geehrc
 PRODUCT_NAME := cm_geehrc
