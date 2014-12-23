@@ -147,6 +147,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	af.resampler.quality=255
 
+## Sounds
+PRODUCT_PROPERTY_OVERRIDES += \
+	af.resample=48000 \
+	persist.audio.pcm.samplerate=48000 \
+	persist.audio.samplerate=48000 \
+	lpa.decode=true \
+	persist.audio.fluence.enable=1 \
+	persist.audio.hp=true \
+	persist.audio.vl.enable=true \
+	persist.audio.voicecall.mic=1 \
+	persist.audio.vr.enable=true \
+	persist.radio.jbims=1 \
+	ro.qc.sdk.audio.fluencetype=fluencepro \
+	ro.sound.driver=alsa \
+	ro.sound.alsa=snd_pcm \
+	ro.sound.alsa=WCD9310 \
+	ro.sound.alsa=msm8960sndcard
+
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.apm_sim_not_pwdn=1
