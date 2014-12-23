@@ -318,6 +318,26 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc
 
+## Save Battery
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ril.disable.power.collapse=0 \
+	ro.config.hw_power_saving=1 \
+	ro.config.hw_fast_dormancy=1 \
+	pm.sleep_mode=1
+
+## Home Launcher Always On
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.HOME_APP_ADJ=1
+
+## Disable Blackscreen Issue After Call
+PRODUCT_PROPERTY_OVERRIDES += \
+	mot.proximity.delay=0 \
+	ro.lge.proximity.delay=25
+
+## Allows purging of assets to free up RAM
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.purgeable_assets=1
+
 # QRNGD
 PRODUCT_PACKAGES += qrngd
 
