@@ -139,7 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.handset.mic.type=digital \
 	persist.audio.dualmic.config=endfire \
 	persist.audio.fluence.voicecall=true \
-	persist.audio.handset.mic=dmic \
+	persist.audio.handset.mic=digital \
 	persist.audio.fluence.mode=endfire \
 	persist.audio.lowlatency.rec=false
 
