@@ -241,6 +241,17 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant_overlay.conf \
 	p2p_supplicant_overlay.conf
 
+# Optimus G Stock Default Sounds
+PRODUCT_COPY_FILES += \
+	device/lge/geehrc/audio/alarms/Lifes_Good_Alarm.ogg:system/media/audio/alarms/Lifes_Good_Alarm.ogg \
+	device/lge/geehrc/audio/notifications/Optimus.ogg:system/media/audio/notifications/Optimus.ogg \
+	device/lge/geehrc/audio/ringtones/Lifes_Good.ogg:system/media/audio/ringtones/Lifes_Good.ogg
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.alarm_alert=Lifes_Good_Alarm.ogg \
+	ro.config.notification_sound=Optimus.ogg \
+	ro.config.ringtone=Lifes_Good.ogg
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
