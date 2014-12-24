@@ -165,6 +165,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sound.alsa=WCD9310 \
 	ro.sound.alsa=msm8960sndcard
 
+## Volume Steps
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.vc_call_vol_steps=10 \
+	ro.config.media_vol_steps=40
+
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.apm_sim_not_pwdn=1
