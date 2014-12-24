@@ -1,0 +1,7 @@
+[
+ {
+   "repository": "jolla-kernel_G",
+   "target_path": "kernel/lge/gee"
+   "revision": "cm12-stock_cam"
+ }
+]
