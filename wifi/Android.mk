@@ -25,15 +25,33 @@
 
 ifneq ($(filter geehrc,$(TARGET_DEVICE)),)
 
-# This is ugly for more reasons than I can mention. Don't think
-# that this is a good idea. It's not. It's horrible. It's truly
-# entirely horrible. It's not an elegant hack in any way.
+LOCAL_PATH := $(call my-dir)
 
-$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9310; \
-	ln -sf /data/misc/audio/wcd9310_anc.bin \
-	$(TARGET_OUT_ETC)/firmware/wcd9310/wcd9310_anc.bin; \
-	ln -sf /data/misc/audio/mbhc.bin \
-	$(TARGET_OUT_ETC)/firmware/wcd9310/wcd9310_mbhc.bin)
+include $(CLEAR_VARS)
+LOCAL_MODULE       := wpa_supplicant_overlay.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := p2p_supplicant_overlay.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := hostapd_default.conf
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
+include $(BUILD_PREBUILT)
+
+include $(call first-makefiles-under,$(LOCAL_PATH))
 
 endif
 

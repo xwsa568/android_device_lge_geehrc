@@ -47,41 +47,41 @@ PRODUCT_PACKAGES += \
         librs_jni
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	device/lge/geehrc/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh
+	device/lge/geehrc/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
+	device/lge/geehrc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+	device/lge/geehrc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+	device/lge/geehrc/wifi/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh
 
 PRODUCT_COPY_FILES += \
         device/lge/geehrc/fetch-swv:system/bin/fetch-swv
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf
+	device/lge/geehrc/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/mixer_paths.xml:system/etc/mixer_paths.xml
+	device/lge/geehrc/media/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/init.geehrc.rc:root/init.geehrc.rc \
-	device/lge/geehrc/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
-	device/lge/geehrc/fstab.geehrc:root/fstab.geehrc \
-	device/lge/geehrc/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
-	device/lge/geehrc/media_profiles.xml:system/etc/media_profiles.xml \
+	device/lge/geehrc/ramdisk/init.geehrc.rc:root/init.geehrc.rc \
+	device/lge/geehrc/ramdisk/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
+	device/lge/geehrc/ramdisk/fstab.geehrc:root/fstab.geehrc \
+	device/lge/geehrc/ramdisk/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
+	device/lge/geehrc/media/media_profiles.xml:system/etc/media_profiles.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-	device/lge/geehrc/media_codecs.xml:system/etc/media_codecs.xml
+	device/lge/geehrc/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
-	device/lge/geehrc/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
-	device/lge/geehrc/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
-	device/lge/geehrc/keypad_8064.kl:system/usr/keylayout/keypad_8064.kl \
-	device/lge/geehrc/apq8064-tabla-snd-card_Button_Jack.kcm:system/usr/keychars/apq8064-tabla-snd-card_Button_Jack.kcm \
-	device/lge/geehrc/hs_detect.kcm:system/usr/keychars/hs_detect.kcm \
-	device/lge/geehrc/keypad_8064.kcm:system/usr/keychars/keypad_8064.kcm \
-	device/lge/geehrc/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm
+	device/lge/geehrc/keymaps/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
+	device/lge/geehrc/keymaps/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
+	device/lge/geehrc/keymaps/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
+	device/lge/geehrc/keymaps/keypad_8064.kl:system/usr/keylayout/keypad_8064.kl \
+	device/lge/geehrc/keymaps/apq8064-tabla-snd-card_Button_Jack.kcm:system/usr/keychars/apq8064-tabla-snd-card_Button_Jack.kcm \
+	device/lge/geehrc/keymaps/hs_detect.kcm:system/usr/keychars/hs_detect.kcm \
+	device/lge/geehrc/keymaps/keypad_8064.kcm:system/usr/keychars/keypad_8064.kcm \
+	device/lge/geehrc/keymaps/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += libqcomvoiceprocessing
 PRODUCT_COPY_FILES += \
-    device/lge/geehrc/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/lge/geehrc/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
 	hci_qcomm_init
@@ -220,7 +220,7 @@ PRODUCT_PACKAGES += \
 	power.msm8960
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/init.geehrc.bt.sh:system/etc/init.geehrc.bt.sh
+	device/lge/geehrc/bluetooth/init.geehrc.bt.sh:system/etc/init.geehrc.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
@@ -239,7 +239,7 @@ endif
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/geehrc/gps.conf:system/etc/gps.conf
+        device/lge/geehrc/gps.conf:system/etc/configs/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
