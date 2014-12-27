@@ -25,6 +25,10 @@
 
 ifneq ($(filter geehrc,$(TARGET_DEVICE)),)
 
+LOCAL_PATH := $(call my-dir)
+
+include $(call first-makefiles-under,$(LOCAL_PATH))
+
 # This is ugly for more reasons than I can mention. Don't think
 # that this is a good idea. It's not. It's horrible. It's truly
 # entirely horrible. It's not an elegant hack in any way.
