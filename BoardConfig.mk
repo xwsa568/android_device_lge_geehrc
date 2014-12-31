@@ -90,7 +90,7 @@ ifeq ($(HOST_OS),linux)
 endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
-TARGET_RECOVERY_FSTAB = device/lge/geehrc/fstab.geehrc
+TARGET_RECOVERY_FSTAB = device/lge/geehrc/ramdisk/fstab.geehrc
 RECOVERY_FSTAB_VERSION = 2
 TARGET_USERIMAGES_USE_EXT4 := true
 # F2FS Support
