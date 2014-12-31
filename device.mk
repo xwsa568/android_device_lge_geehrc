@@ -46,6 +46,12 @@ PRODUCT_PACKAGES += \
         VisualizationWallpapers \
         librs_jni
 
+# Wifi system files
+PRODUCT_COPY_FILES += \
+	device/lge/geehrc/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+	device/lge/geehrc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+	device/lge/geehrc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/geehrc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
