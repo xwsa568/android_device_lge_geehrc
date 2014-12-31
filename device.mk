@@ -246,7 +246,7 @@ endif
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/geehrc/gps.conf:system/etc/configs/gps.conf
+        device/lge/geehrc/configs/gps.conf:system/etc/configs/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
