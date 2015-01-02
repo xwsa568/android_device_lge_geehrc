@@ -42,8 +42,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 TARGET_KERNEL_SOURCE := kernel/lge/gee
 TARGET_KERNEL_CONFIG := gee_defconfig
 
-BOARD_USES_ALSA_AUDIO:= true
-BOARD_USES_LEGACY_ALSA_AUDIO:= false
+BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_LEGACY_ALSA_AUDIO := false
 BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
 
@@ -158,7 +158,7 @@ EXTENDED_FONT_FOOTPRINT := true
 
 MALLOC_IMPL := dlmalloc
 
--include vendor/lge/gee/BoardConfigVendor.mk
+include vendor/lge/gee/BoardConfigVendor.mk
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
