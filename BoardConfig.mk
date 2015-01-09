@@ -158,8 +158,6 @@ EXTENDED_FONT_FOOTPRINT := true
 
 MALLOC_IMPL := dlmalloc
 
-include vendor/lge/gee/BoardConfigVendor.mk
-
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 #TWRP config
