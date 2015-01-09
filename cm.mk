@@ -8,6 +8,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
+# /system/etc/init.d Support
+PRODUCT_COPY_FILES += \
+	vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geehrc
 PRODUCT_NAME := cm_geehrc
