@@ -36,3 +36,4 @@ allow netmgrd shell_exec:file rx_file_perms;
 allow netmgrd system_file:file rx_file_perms;
 
 allow netmgrd self:process execmem;
+allow netmgrd self:packet_socket { create bind read write };
