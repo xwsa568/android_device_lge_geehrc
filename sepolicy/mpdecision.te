@@ -46,8 +46,4 @@ r_dir_file(mpdecision, mediaserver)
 allow mpdecision self:capability sys_nice;
 
 allow mpdecision self:process execmem;
-allow mpdecision servicemanager:binder { call };
-
-allow servicemanager mpdecision:dir { search };
-allow servicemanager mpdecision:file { r_file_perms };
-allow servicemanager mpdecision:process { getattr };
+binder_use(mpdecision)
