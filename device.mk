@@ -95,6 +95,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/touch_dev.idc:system/usr/idc/touch_dev.idc
 
+# Copy USB-Keyboard/Mouse working with jolla-kernel
+PRODUCT_COPY_FILES += \
+	device/lge/geehrc/app/USB-Keyboard.apk:/system/app/USB-Keyboard/USB-Keyboard.apk \
+	device/lge/geehrc/app/lib/libapplication.so:/system/app/USB-Keyboard/lib/arm/libapplication.so \
+	device/lge/geehrc/app/lib/libsdl-1.2.so:/system/app/USB-Keyboard/lib/arm/libsdl-1.2.so \
+	device/lge/geehrc/app/lib/libsdl_image.so:/system/app/USB-Keyboard/lib/arm/libsdl_image.so \
+	device/lge/geehrc/app/lib/libsdl_main.so:/system/app/USB-Keyboard/lib/arm/libsdl_main.so \
+	device/lge/geehrc/app/lib/libsdl_native_helpers.so:/system/app/USB-Keyboard/lib/arm/libsdl_native_helpers.so \
+	device/lge/geehrc/app/lib/libsdl_ttf.so:/system/app/USB-Keyboard/lib/arm/libsdl_ttf.so
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
