@@ -3,18 +3,18 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/carbon/config/common_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
 # /system/etc/init.d Support
 PRODUCT_COPY_FILES += \
-	vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
+	vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geehrc
-PRODUCT_NAME := cm_geehrc
+PRODUCT_NAME := carbon_geehrc
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
